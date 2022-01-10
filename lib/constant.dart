@@ -6,6 +6,8 @@ const Color kDarkClr = Colors.black;
 const Color kGreyClr = Colors.grey;
 const Color kBabyBlueClr = Color(0xFFF4F6FB);
 
+const Radius radius25 = Radius.circular(25);
+
 //dark and light theme
 class Themes {
   static final light = ThemeData(

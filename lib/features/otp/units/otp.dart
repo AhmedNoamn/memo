@@ -3,23 +3,24 @@ part of '../view.dart';
 class CodeValue extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
+    var sizeBox = SizedBox(height: 20);
     return Container(
       padding: EdgeInsets.only(right: 10, left: 10, top: 30, bottom: 100),
       decoration: BoxDecoration(
-          borderRadius: BorderRadius.vertical(top: Radius.circular(25)),
-          color: kWhiteClr),
+          borderRadius: BorderRadius.vertical(top: radius25), color: kWhiteClr),
       child: Column(
         children: [
           Text(
             'OTP VERFICATION CODE',
             style: buttonStyle,
           ),
-          SizedBox(height: 50),
+          sizeBox,
+          sizeBox,
           Text(
             'code has been sent to : 3145634',
             style: bodyStyle2.copyWith(color: kDarkClr),
           ),
-          SizedBox(height: 20),
+          sizeBox,
           Wrap(
             alignment: WrapAlignment.center,
             spacing: 15,
@@ -31,7 +32,7 @@ class CodeValue extends StatelessWidget {
               OtpCard(false),
             ],
           ),
-          SizedBox(height: 30),
+          sizeBox,
           SendCodeUnit(),
         ],
       ),

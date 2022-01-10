@@ -17,8 +17,9 @@ class __FieldsUnitsState extends State<_FieldsUnits> {
     return Container(
       padding: EdgeInsets.only(bottom: 40, right: 10, left: 10, top: 30),
       decoration: BoxDecoration(
-          borderRadius: BorderRadius.vertical(top: Radius.circular(25)),
-          color: kWhiteClr),
+        borderRadius: BorderRadius.vertical(top: radius25),
+        color: kWhiteClr,
+      ),
       child: Column(
         mainAxisAlignment: MainAxisAlignment.center,
         children: [

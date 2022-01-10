@@ -3,11 +3,13 @@ part of '../view.dart';
 class _FieldsUnits extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
+    var sizeBox = SizedBox(height: 15);
     return Container(
       padding: EdgeInsets.symmetric(vertical: 30),
       decoration: BoxDecoration(
-          borderRadius: BorderRadius.vertical(top: Radius.circular(25)),
-          color: kWhiteClr),
+        borderRadius: BorderRadius.vertical(top: radius25),
+        color: kWhiteClr,
+      ),
       child: Column(
         mainAxisAlignment: MainAxisAlignment.center,
         children: [
@@ -15,7 +17,7 @@ class _FieldsUnits extends StatelessWidget {
             'REGISTER',
             style: bodyStyle.copyWith(color: kRedClr),
           ),
-          SizedBox(height: 15),
+          sizeBox,
           CustomInputField(
             title: 'User Name',
             hint: 'enter name',
@@ -36,7 +38,7 @@ class _FieldsUnits extends StatelessWidget {
             hint: ' re-enter password',
             obscureText: false,
           ),
-          SizedBox(height: 10),
+          sizeBox,
           _ButtonsUnits()
         ],
       ),
