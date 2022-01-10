@@ -7,16 +7,11 @@ class SideBarMenu extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      body: AnimatedContainer(
-        padding: EdgeInsets.symmetric(vertical: 20, horizontal: 30),
-        duration: Duration(milliseconds: 1000),
-        color: kRedClr,
-        child: Column(
-          children: [
-            Heading(),
-            Expanded(child: SingleChildScrollView(child: ListTileItems())),
-          ],
-        ),
+      body: Column(
+        children: [
+          Heading(),
+          Expanded(child: SingleChildScrollView(child: ListTileItems())),
+        ],
       ),
     );
   }

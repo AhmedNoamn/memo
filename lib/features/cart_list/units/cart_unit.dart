@@ -12,6 +12,7 @@ class _CartUnit extends StatelessWidget {
 class Cart extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
+    final itemCubit = AddItemCubit.of(context);
     return Container(
       height: 100,
       width: double.infinity,
@@ -38,26 +39,36 @@ class Cart extends StatelessWidget {
               Text('\$1700', style: bodyStyle2),
               Row(
                 children: [
-                  CustomIconButton(
-                      buttonColor: kBabyBlueClr,
-                      onTap: () {},
-                      icon: Icon(
-                        Icons.add,
-                        color: kGreyClr,
-                        size: 20,
-                      )),
-                  Text(
-                    '1',
-                    style: textStyle5,
-                  ),
-                  CustomIconButton(
-                      buttonColor: kBabyBlueClr,
-                      onTap: () {},
-                      icon: Icon(
-                        Icons.remove,
-                        color: kGreyClr,
-                        size: 20,
-                      )),
+                  BlocBuilder(
+                      bloc: itemCubit,
+                      builder: (context, states) {
+                        return CustomIconButton(
+                          onTap: itemCubit.itemPlus,
+                          icon: Icon(
+                            Icons.add,
+                            color: kGreyClr,
+                            size: 20,
+                          ),
+                        );
+                      }),
+                  BlocBuilder(
+                      bloc: itemCubit,
+                      builder: (context, states) {
+                        return Text(itemCubit.itemCount.toString(),
+                            style: textStyle5);
+                      }),
+                  BlocBuilder(
+                      bloc: itemCubit,
+                      builder: (context, states) {
+                        return CustomIconButton(
+                          onTap: itemCubit.itemMinus,
+                          icon: Icon(
+                            Icons.remove,
+                            color: kGreyClr,
+                            size: 20,
+                          ),
+                        );
+                      })
                 ],
               )
             ],

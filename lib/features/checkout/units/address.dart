@@ -1,19 +1,35 @@
 part of '../view.dart';
 
 class _ShippingAddress extends StatelessWidget {
+  final List<Widget> _shippingAddress = [
+    CheckoutWidget(
+      title: 'Name',
+      subtitle: 'Ahmed Noaman',
+    ),
+    CheckoutWidget(
+      title: 'Address',
+      subtitle: 'domyat',
+    ),
+    CheckoutWidget(
+      title: 'Pincode',
+      subtitle: '424345',
+    ),
+  ];
   @override
   Widget build(BuildContext context) {
     return Column(
-      crossAxisAlignment: CrossAxisAlignment.start,
-      children: List.generate(
-        3,
-        (index) => CheckoutWidget(),
-      ),
-    );
+        crossAxisAlignment: CrossAxisAlignment.start,
+        children: _shippingAddress);
   }
 }
 
 class CheckoutWidget extends StatelessWidget {
+  final String title;
+  final String subtitle;
+  const CheckoutWidget({
+    required this.title,
+    required this.subtitle,
+  });
   @override
   Widget build(BuildContext context) {
     return Container(
@@ -28,12 +44,12 @@ class CheckoutWidget extends StatelessWidget {
         crossAxisAlignment: CrossAxisAlignment.start,
         children: [
           Text(
-            'Name',
+            title,
             style: textStyle5,
           ),
           //SizedBox(height: 10),
           Text(
-            'Ahmed Noaman',
+            subtitle,
             style: textStyle5.copyWith(fontSize: 16),
           ),
         ],

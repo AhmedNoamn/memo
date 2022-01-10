@@ -27,7 +27,7 @@ class CustomInputField extends StatelessWidget {
     return Container(
       //width: width ?? double.infinity,
       padding: EdgeInsets.symmetric(horizontal: 15, vertical: 10),
-      margin: EdgeInsets.only(left: 15, bottom: 20, right: 15),
+      margin: EdgeInsets.only(left: 15, bottom: 10, right: 15),
       decoration: BoxDecoration(
         border: Border.all(color: kBabyBlueClr),
         borderRadius: BorderRadius.circular(10),
@@ -42,8 +42,8 @@ class CustomInputField extends StatelessWidget {
             style: headingStyle,
           ),
           Divider(
-            thickness: 2,
-          ),
+              //thickness: 1.2,
+              ),
           Row(
             crossAxisAlignment: CrossAxisAlignment.center,
             children: [
@@ -61,12 +61,12 @@ class CustomInputField extends StatelessWidget {
                     focusedBorder: UnderlineInputBorder(
                         borderSide: BorderSide(
                       width: 0,
-                      color: kWhiteClr,
+                      color: kBabyBlueClr,
                     )),
                     enabledBorder: UnderlineInputBorder(
                         borderSide: BorderSide(
                       width: 0,
-                      color: kWhiteClr,
+                      color: kBabyBlueClr,
                     )),
                   ),
                 ),

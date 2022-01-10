@@ -1,4 +1,6 @@
 import 'package:flutter/material.dart';
+import 'package:memo_furniture/core/validator/validator.dart';
+import 'package:memo_furniture/features/register/view.dart';
 
 import '../../constant.dart';
 import '../../core/routers/routers.dart';

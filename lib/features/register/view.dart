@@ -15,11 +15,14 @@ class RegisterView extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
+      appBar: AppBar(
+        elevation: 0,
+        backgroundColor: kRedClr,
+      ),
       body: Container(
         color: kRedClr,
         child: Column(
           children: [
-            SizedBox(height: 50),
             _ImageUnit(),
             SizedBox(height: 20),
             Expanded(child: SingleChildScrollView(child: _FieldsUnits())),

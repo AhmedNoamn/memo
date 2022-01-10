@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:memo_furniture/constant.dart';
+import 'package:memo_furniture/features/cart_list/view.dart';
 
-import 'package:memo_furniture/features/chat/view.dart';
 import 'package:memo_furniture/features/home/view.dart';
 import 'package:memo_furniture/features/profile/view.dart';
 import 'package:memo_furniture/widgets/bottom_nav_bar.dart';
@@ -12,36 +12,25 @@ class StartView extends StatefulWidget {
 }
 
 class _StartViewState extends State<StartView> {
-  int currentIndex = 2;
-
-  PageController pageController = PageController();
+  int currentIndex = 1;
 
   void ontap(int index) {
     setState(() {
       currentIndex = index;
     });
-    pageController.animateToPage(
-      index,
-      duration: Duration(milliseconds: 250),
-      curve: Curves.easeOutBack,
-    );
   }
 
+  List<Widget> _pages = [
+    CartView(),
+    HomeView(),
+    ProfileView(),
+  ];
   @override
   Widget build(BuildContext context) {
     return Scaffold(
       body: Container(
-        decoration: BoxDecoration(
-            color: kRedClr,
-            borderRadius: BorderRadius.vertical(bottom: Radius.circular(30))),
-        child: PageView(
-          controller: pageController,
-          children: [
-            ChatView(),
-            HomeView(),
-            ProfileView(),
-          ],
-        ),
+        color: kRedClr,
+        child: _pages[currentIndex],
       ),
       bottomNavigationBar: BottomNavBar(
         index: currentIndex,

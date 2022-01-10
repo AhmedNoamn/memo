@@ -5,6 +5,16 @@ class _ButtonsUnits extends StatelessWidget {
   Widget build(BuildContext context) {
     return Column(
       children: [
+        Align(
+          alignment: Alignment.bottomRight,
+          child: CustomTextButton(
+              onPressed: () => MagicRoute.navigateTo(ForgotPassView()),
+              text: Text(
+                'Forgot Password?',
+                style: bodyStyle.copyWith(color: kGreyClr),
+              )),
+        ),
+        SizedBox(height: 30),
         CustomButton(
           onTap: () {},
           label: 'SIGN IN',
@@ -12,10 +22,10 @@ class _ButtonsUnits extends StatelessWidget {
           buttonColor: kRedClr,
         ),
         CustomTextButton(
-            onPressed: () => MagicRoute.navigateTo(ForgotPassView()),
+            onPressed: () => MagicRoute.navigateTo(RegisterView()),
             text: Text(
-              'Forgot Password?',
-              style: bodyStyle.copyWith(color: kGreyClr),
+              'or Register ',
+              style: bodyStyle.copyWith(color: kRedClr),
             )),
       ],
     );

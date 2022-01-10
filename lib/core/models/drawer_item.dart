@@ -4,6 +4,7 @@ import 'package:font_awesome_flutter/font_awesome_flutter.dart';
 class DrawerItem {
   final String title;
   final IconData icon;
+
   const DrawerItem({
     required this.title,
     required this.icon,
@@ -14,7 +15,7 @@ class DrawerItems {
   static const home = DrawerItem(title: 'Home', icon: FontAwesomeIcons.home);
 
   static const myCart =
-      DrawerItem(title: 'My Cart', icon: FontAwesomeIcons.shoppingBasket);
+      DrawerItem(title: 'My Cart', icon: FontAwesomeIcons.shoppingCart);
 
   static const upComingOrder =
       DrawerItem(title: 'UpComing Order', icon: FontAwesomeIcons.cube);
@@ -26,7 +27,7 @@ class DrawerItems {
       DrawerItem(title: 'My Account', icon: FontAwesomeIcons.userAlt);
 
   static const myChat =
-      DrawerItem(title: 'My Chat', icon: FontAwesomeIcons.mailBulk);
+      DrawerItem(title: 'My Chat', icon: FontAwesomeIcons.comment);
 
   static const help =
       DrawerItem(title: 'Help', icon: FontAwesomeIcons.questionCircle);

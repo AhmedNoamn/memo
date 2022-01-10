@@ -12,7 +12,7 @@ class _ButtonsUnits extends StatelessWidget {
           buttonColor: kRedClr,
         ),
         CustomTextButton(
-            onPressed: () => MagicRoute.navigateTo(SignInView()),
+            onPressed: () => MagicRoute.navigateAndPopAll(SignInView()),
             text: Text(
               'already have an Account?',
               style: bodyStyle.copyWith(color: kGreyClr),

@@ -22,7 +22,11 @@ class ForgotPassView extends StatelessWidget {
           children: [
             _ImageUnit(),
             SizedBox(height: 40),
-            Expanded(child: SingleChildScrollView(child: CodeValue())),
+            Expanded(
+              child: SingleChildScrollView(
+                child: CodeValue(),
+              ),
+            ),
           ],
         ),
       ),

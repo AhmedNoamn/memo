@@ -2,25 +2,28 @@ import 'package:flutter/material.dart';
 import 'package:memo_furniture/constant.dart';
 
 class CustomListTile extends StatelessWidget {
-  const CustomListTile(
-      {required this.leading,
-      required this.title,
-      this.subTitle,
-      this.trailling,
-      this.color});
+  const CustomListTile({
+    required this.leading,
+    required this.title,
+    this.subTitle,
+    this.trailling,
+    this.color,
+    this.borderColor,
+  });
 
   final Widget? leading;
   final Widget title;
   final Widget? subTitle;
   final Widget? trailling;
   final Color? color;
+  final Color? borderColor;
   @override
   Widget build(BuildContext context) {
     return Container(
       decoration: BoxDecoration(
           borderRadius: BorderRadius.circular(10),
           color: color ?? kBabyBlueClr,
-          border: Border.all(color: kBabyBlueClr, width: 0.5)),
+          border: Border.all(color: borderColor ?? kBabyBlueClr, width: 0.5)),
       margin: EdgeInsets.only(bottom: 5),
       child: ListTile(
         leading: leading ??

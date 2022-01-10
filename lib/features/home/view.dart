@@ -1,7 +1,6 @@
 import 'package:fancy_drawer/fancy_drawer.dart';
 import 'package:flutter/material.dart';
 import 'package:font_awesome_flutter/font_awesome_flutter.dart';
-import 'package:memo_furniture/widgets/bottom_nav_bar.dart';
 
 import '../../constant.dart';
 import '../../widgets/search_field.dart';
@@ -25,7 +24,7 @@ class _HomeViewState extends State<HomeView>
   void initState() {
     super.initState();
     _controller = FancyDrawerController(
-        vsync: this, duration: Duration(milliseconds: 250))
+        vsync: this, duration: Duration(milliseconds: 300))
       ..addListener(() {
         setState(() {});
       });
@@ -73,19 +72,24 @@ class _HomeViewState extends State<HomeView>
               IconButton(
                 onPressed: () {},
                 icon: Icon(
-                  FontAwesomeIcons.shoppingBasket,
+                  FontAwesomeIcons.shoppingCart,
                   color: kDarkClr,
                 ),
               ),
             ],
           ),
-          body: ListView(
-            padding: EdgeInsets.all(15),
-            children: [
-              _SearchUnit(),
-              _CardUnit(),
-              _PopularItemUnit(),
-            ],
+          body: Container(
+            decoration: BoxDecoration(
+                borderRadius:
+                    BorderRadius.vertical(bottom: Radius.circular(30))),
+            child: ListView(
+              padding: EdgeInsets.symmetric(horizontal: 15),
+              children: [
+                _SearchUnit(),
+                _CardUnit(),
+                _PopularItemUnit(),
+              ],
+            ),
           ),
         ),
       ),

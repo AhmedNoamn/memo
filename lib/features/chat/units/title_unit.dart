@@ -6,6 +6,7 @@ class _TitleUnit extends StatelessWidget {
     return Padding(
       padding: const EdgeInsets.symmetric(horizontal: 10),
       child: CustomListTile(
+        borderColor: Colors.transparent,
         color: kRedClr,
         leading: Image.asset(
           'assets/images/logo2.png',

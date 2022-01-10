@@ -14,7 +14,6 @@ import 'features/profile/view.dart';
 import 'features/register/view.dart';
 import 'features/signin/view.dart';
 import 'features/splash/view.dart';
-import 'features/welcome/view.dart';
 
 void main() {
   runApp(MyApp());
@@ -31,7 +30,7 @@ class MyApp extends StatelessWidget {
       ),
       navigatorKey: navigatorKey,
       onGenerateRoute: onGenerateRoute,
-      home: StartView(),
+      home: SplashView(),
     );
   }
 }

@@ -4,7 +4,7 @@ class CodeValue extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Container(
-      padding: EdgeInsets.only(right: 10, left: 10, top: 50, bottom: 100),
+      padding: EdgeInsets.only(right: 10, left: 10, top: 30, bottom: 100),
       decoration: BoxDecoration(
           borderRadius: BorderRadius.vertical(top: Radius.circular(25)),
           color: kWhiteClr),
@@ -14,9 +14,9 @@ class CodeValue extends StatelessWidget {
             'OTP VERFICATION CODE',
             style: buttonStyle,
           ),
-          SizedBox(height: 20),
+          SizedBox(height: 50),
           Text(
-            'code has been sent to 3145634',
+            'code has been sent to : 3145634',
             style: bodyStyle2.copyWith(color: kDarkClr),
           ),
           SizedBox(height: 20),

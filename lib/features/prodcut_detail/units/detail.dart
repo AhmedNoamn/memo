@@ -40,22 +40,3 @@ class __DetailUnitState extends State<_DetailUnit> {
     ]);
   }
 }
-/*
- Row(
-        mainAxisAlignment: MainAxisAlignment.spaceBetween,
-        children: List.generate(
-            4,
-            (index) => CustomTextButton(
-                onPressed: () {},
-                text: Text(
-                  'data',
-                  style: textStyle5,
-                ))),
-      ),    
-      Divider(),
-      SizedBox(height: 20),
-      Text(
-        'Minimalist styling is not about creating a cold, hard, empty white box of a home. It is about using simple and natural forms, and taking away layers without losing the aesthetic appeal of the space. The focus is on shape, with a furniture and accesso',
-      ),
-      SizedBox(height: 50),
-*/

@@ -3,6 +3,7 @@ part of '../view.dart';
 class _Buttons extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
+    final itemCubit = AddItemCubit.of(context);
     return Row(
       mainAxisAlignment: MainAxisAlignment.spaceBetween,
       children: [
@@ -13,16 +14,28 @@ class _Buttons extends StatelessWidget {
             borderRadius: BorderRadius.circular(25),
           ),
           child:
-              Row(mainAxisAlignment: MainAxisAlignment.spaceEvenly, children: [
-            CustomIconButton(
-              onTap: () {},
-              icon: Icon(Icons.add, color: kRedClr),
-            ),
-            Text('1', style: bodyStyle),
-            CustomIconButton(
-              onTap: () {},
-              icon: Icon(Icons.remove, color: kRedClr),
-            )
+              Row(mainAxisAlignment: MainAxisAlignment.spaceBetween, children: [
+            BlocBuilder(
+                bloc: itemCubit,
+                builder: (context, states) {
+                  return CustomIconButton(
+                    onTap: itemCubit.itemPlus,
+                    icon: Icon(Icons.add, color: kRedClr),
+                  );
+                }),
+            BlocBuilder(
+                bloc: itemCubit,
+                builder: (context, states) {
+                  return Text(itemCubit.itemCount.toString(), style: bodyStyle);
+                }),
+            BlocBuilder(
+                bloc: itemCubit,
+                builder: (context, states) {
+                  return CustomIconButton(
+                    onTap: itemCubit.itemMinus,
+                    icon: Icon(Icons.remove, color: kRedClr),
+                  );
+                })
           ]),
         ),
         CustomButton(

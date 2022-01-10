@@ -14,7 +14,7 @@ class _CheckButtonsState extends State<_CheckButtons> {
         Column(
           children: [
             Text('Total Amount', style: bodyStyle2),
-            Text('1700 \$', style: textStyle5)
+            Text(' \$ 1700', style: textStyle5)
           ],
         ),
         CustomButton(

@@ -23,13 +23,13 @@ class DrawerItems {
       DrawerItem(title: 'Upcoming Orders', icon: FontAwesomeIcons.truck);
 
   static const manageAddress =
-      DrawerItem(title: 'Manage Address', icon: FontAwesomeIcons.locationArrow);
+      DrawerItem(title: 'Manage Address', icon: FontAwesomeIcons.mapMarkerAlt);
 
   static const updatePayment =
       DrawerItem(title: 'Update payment', icon: FontAwesomeIcons.creditCard);
 
   static const myChat =
-      DrawerItem(title: 'My Chat', icon: FontAwesomeIcons.mailBulk);
+      DrawerItem(title: 'My Chat', icon: FontAwesomeIcons.comment);
 
   static final List<DrawerItem> item = [
     order,

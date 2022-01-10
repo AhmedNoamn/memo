@@ -22,8 +22,14 @@ class _PayMethod extends StatelessWidget {
               //crossAxisAlignment: CrossAxisAlignment.start,
               children: [
                 SizedBox(height: 10),
-                CheckoutWidget(),
-                CheckoutWidget(),
+                CheckoutWidget(
+                  title: 'Name on Card',
+                  subtitle: 'ahmed no3',
+                ),
+                CheckoutWidget(
+                  title: 'Name on Card',
+                  subtitle: '5413524856431586',
+                ),
                 Row(
                   mainAxisAlignment: MainAxisAlignment.spaceAround,
                   children: List.generate(

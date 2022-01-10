@@ -13,6 +13,11 @@ class BottomNavBar extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return BottomNavigationBar(
+      selectedFontSize: 25,
+      currentIndex: index,
+      selectedItemColor: kWhiteClr,
+      unselectedItemColor: kGreyClr,
+      onTap: ontap,
       backgroundColor: kRedClr,
       elevation: 0,
       items: const <BottomNavigationBarItem>[
@@ -35,10 +40,6 @@ class BottomNavBar extends StatelessWidget {
             ),
             label: '.'),
       ],
-      currentIndex: index,
-      selectedItemColor: kWhiteClr,
-      unselectedItemColor: kGreyClr,
-      onTap: ontap,
     );
   }
 }

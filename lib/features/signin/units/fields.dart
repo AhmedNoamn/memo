@@ -33,6 +33,7 @@ class __FieldsUnitsState extends State<_FieldsUnits> {
             title: 'User Name',
           ),
           CustomInputField(
+            validator: Validator.validPassword,
             hint: 'enter password',
             obscureText: isSecured,
             title: 'PassWord',

@@ -20,7 +20,7 @@ class CustomSearchField extends StatelessWidget {
     return Container(
       width: width ?? double.infinity,
       padding: EdgeInsets.only(left: 15, top: 3, right: 15),
-      margin: EdgeInsets.only(left: 10, bottom: 10, right: 10),
+      margin: EdgeInsets.only(left: 10, right: 10),
       decoration: BoxDecoration(
         border: Border.all(color: kBabyBlueClr),
         borderRadius: BorderRadius.circular(20),
